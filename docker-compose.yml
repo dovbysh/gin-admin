@@ -1,0 +1,45 @@
+version: '3.4'
+
+networks:
+  default:
+    external:
+      name: gds
+
+services:
+  gin-admin-api:
+    image: golang:latest
+    restart: always
+    ports:
+      - "22282:80"
+    volumes:
+      - ./:/opt
+      - go:/go
+    working_dir: /opt
+    command: "make start"
+
+  gin-admin-react:
+    image: node:carbon
+    restart: always
+    ports:
+      - "22283:80"
+      - "22284:8000"
+    volumes:
+      - ./gin-admin-react:/opt
+    working_dir: /opt
+    command: bash -c "npm install && npm start"
+
+  db:
+    image: postgres:11-alpine
+    restart: always
+    ports:
+      - "22233:5432"
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: db
+      POSTGRES_USER: root
+
+volumes:
+  postgres:
+  go:

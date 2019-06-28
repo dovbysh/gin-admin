@@ -9,7 +9,7 @@ RELEASE_SERVER = "release/ginadmin"
 all: start
 
 build:
-	@go build -ldflags "-w -s" -o $(SERVER_BIN) ./cmd/ginadmin
+	@go build -o $(SERVER_BIN) ./cmd/ginadmin
 
 start: 
 	@go build -o $(SERVER_BIN) ./cmd/ginadmin
