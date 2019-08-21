@@ -15,6 +15,7 @@ require (
 	github.com/go-redis/redis_rate v0.0.0-20180123081253-b7ae80ece379
 	github.com/go-sql-driver/mysql v0.0.0-20170512152933-382e13d099fc // indirect
 	github.com/google/gops v0.3.6
+	github.com/google/uuid v1.1.1
 	github.com/jinzhu/gorm v0.0.0-20190102133208-9f1a7f535111
 	github.com/jinzhu/inflection v0.0.0-20180308033659-04140366298a // indirect
 	github.com/json-iterator/go v1.1.5
@@ -32,6 +33,7 @@ require (
 	github.com/tidwall/rtree v0.0.0-20180113144539-6cd427091e0e // indirect
 	github.com/tidwall/tinyqueue v0.0.0-20180302190814-1e39f5511563 // indirect
 	github.com/ugorji/go v0.0.0-20190128213124-ee1426cffec0 // indirect
+	go.uber.org/dig v1.7.1-0.20190614173321-8a567bf6562e
 	golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2 // indirect
 	golang.org/x/net v0.0.0-20190301231341-16b79f2e4e95 // indirect
 	golang.org/x/sys v0.0.0-20190312061237-fead79001313 // indirect
